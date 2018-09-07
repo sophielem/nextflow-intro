@@ -1,0 +1,2 @@
+>sequence64
+GC content : 47.76%

@@ -1,0 +1,26 @@
+digraph "graphe" {
+p0 [shape=point,label="",fixedsize=true,width=0.1,xlabel="Channel.fromFilePairs"];
+p1 [label="mapping"];
+p0 -> p1 [label="readChannel"];
+
+p1 [label="mapping"];
+p2 [label="samtools_view"];
+p1 -> p2 [label="mappingChannel"];
+
+p2 [label="samtools_view"];
+p3 [label="samtools_sort"];
+p2 -> p3 [label="bamChannel"];
+
+p3 [label="samtools_sort"];
+p4 [label="bedtools"];
+p3 -> p4 [label="sortbamChannel"];
+
+p4 [label="bedtools"];
+p5 [label="coverageStats"];
+p4 -> p5 [label="coverageChannel"];
+
+p5 [label="coverageStats"];
+p6 [shape=circle,label="",fixedsize=true,width=0.1,xlabel="subscribe"];
+p5 -> p6 [label="cov_result"];
+
+}

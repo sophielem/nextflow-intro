@@ -1,0 +1,4 @@
+Extra parameter(s) specified: "ERR036019samp_1.fastq.gz", "ERR036019samp_2.fastq.gz[1]"
+Error: Encountered internal Bowtie 2 exception (#1)
+Command: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/work/conda/env-3238bf2a524e985c8252d91f9835e761/bin/bowtie2-align-s --wrapper basic-0 -q -x /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/data/FN433596 -S output.sam -p 3 ERR036019samp_2.fastq.gz[0]-2 ERR036019samp_1.fastq.gz ERR036019samp_2.fastq.gz[1] 
+(ERR): bowtie2-align exited with value 1

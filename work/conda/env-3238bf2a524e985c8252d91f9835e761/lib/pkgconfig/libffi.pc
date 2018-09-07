@@ -1,0 +1,11 @@
+prefix=/home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/work/conda/env-3238bf2a524e985c8252d91f9835e761
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+toolexeclibdir=${libdir}
+includedir=${prefix}/include
+
+Name: libffi
+Description: Library supporting Foreign Function Interfaces
+Version: 3.2.1
+Libs: -L${toolexeclibdir} -lffi
+Cflags: -I${includedir}

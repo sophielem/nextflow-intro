@@ -1,0 +1,863 @@
+sept.-07 15:12:48.685 [main] DEBUG nextflow.cli.Launcher - Setting http proxy: [ewebproxy.univ-paris-diderot.fr, 3128]
+sept.-07 15:12:48.709 [main] DEBUG nextflow.cli.Launcher - Setting https proxy: [ewebproxy.univ-paris-diderot.fr, 3128]
+sept.-07 15:12:48.709 [main] DEBUG nextflow.cli.Launcher - $> ../nextflow example1.nf
+sept.-07 15:12:48.743 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 0.31.1
+sept.-07 15:12:48.749 [main] INFO  nextflow.cli.CmdRun - Launching `example1.nf` [exotic_hamilton] - revision: fcf99a3167
+sept.-07 15:12:48.794 [main] DEBUG nextflow.Session - Session uuid: a5bb2520-302b-4da7-beb5-228cb3e82686
+sept.-07 15:12:48.794 [main] DEBUG nextflow.Session - Run name: exotic_hamilton
+sept.-07 15:12:48.794 [main] DEBUG nextflow.Session - Executor pool size: 4
+sept.-07 15:12:48.801 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 0.31.1 build 4886
+  Modified: 07-08-2018 15:53 UTC (17:53 CEST)
+  System: Linux 4.15.0-33-generic
+  Runtime: Groovy 2.4.15 on OpenJDK 64-Bit Server VM 1.8.0_181-8u181-b13-0ubuntu0.18.04.1-b13
+  Encoding: UTF-8 (UTF-8)
+  Process: 6049@lk-525a-wle-20 [172.20.24.241]
+  CPUs: 4 - Mem: 7,7 GB (1,9 GB) - Swap: 14,9 GB (14,9 GB)
+sept.-07 15:12:48.845 [main] DEBUG nextflow.Session - Work-dir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work [nfs]
+sept.-07 15:12:48.954 [main] DEBUG nextflow.Session - Session start invoked
+sept.-07 15:12:48.958 [main] DEBUG nextflow.processor.TaskDispatcher - Dispatcher > start
+sept.-07 15:12:48.959 [main] DEBUG nextflow.script.ScriptRunner - > Script parsing
+sept.-07 15:12:49.100 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+sept.-07 15:12:49.113 [main] DEBUG nextflow.file.PathVisitor - files for syntax: glob; folder: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/data/; pattern: *.fa; options: [:]
+sept.-07 15:12:49.176 [main] DEBUG nextflow.processor.ProcessFactory - << taskConfig executor: null
+sept.-07 15:12:49.176 [main] DEBUG nextflow.processor.ProcessFactory - >> processorType: 'local'
+sept.-07 15:12:49.179 [main] DEBUG nextflow.executor.Executor - Initializing executor: local
+sept.-07 15:12:49.180 [main] INFO  nextflow.executor.Executor - [warm up] executor > local
+sept.-07 15:12:49.183 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=4; memory=7,7 GB; capacity=4; pollInterval=100ms; dumpInterval=5m
+sept.-07 15:12:49.185 [main] DEBUG nextflow.processor.TaskDispatcher - Starting monitor: LocalPollingMonitor
+sept.-07 15:12:49.185 [main] DEBUG n.processor.TaskPollingMonitor - >>> barrier register (monitor: local)
+sept.-07 15:12:49.186 [main] DEBUG nextflow.executor.Executor - Invoke register for executor: local
+sept.-07 15:12:49.213 [main] DEBUG nextflow.Session - >>> barrier register (process: reverse)
+sept.-07 15:12:49.215 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > reverse -- maxForks: 4
+sept.-07 15:12:49.232 [main] DEBUG nextflow.processor.ProcessFactory - << taskConfig executor: null
+sept.-07 15:12:49.233 [main] DEBUG nextflow.processor.ProcessFactory - >> processorType: 'local'
+sept.-07 15:12:49.233 [main] DEBUG nextflow.executor.Executor - Initializing executor: local
+sept.-07 15:12:49.233 [main] DEBUG nextflow.Session - >>> barrier register (process: complement)
+sept.-07 15:12:49.233 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > complement -- maxForks: 4
+sept.-07 15:12:49.236 [main] DEBUG nextflow.processor.ProcessFactory - << taskConfig executor: null
+sept.-07 15:12:49.236 [main] DEBUG nextflow.processor.ProcessFactory - >> processorType: 'local'
+sept.-07 15:12:49.236 [main] DEBUG nextflow.executor.Executor - Initializing executor: local
+sept.-07 15:12:49.236 [main] DEBUG nextflow.Session - >>> barrier register (process: countGC)
+sept.-07 15:12:49.236 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > countGC -- maxForks: 4
+sept.-07 15:12:49.244 [main] DEBUG nextflow.script.ScriptRunner - > Await termination 
+sept.-07 15:12:49.244 [main] DEBUG nextflow.Session - Session await
+sept.-07 15:12:49.384 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:49.387 [Task submitter] INFO  nextflow.Session - [f8/d3e9e8] Submitted process > reverse (1)
+sept.-07 15:12:49.403 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:49.404 [Task submitter] INFO  nextflow.Session - [9e/ade7bc] Submitted process > reverse (2)
+sept.-07 15:12:49.409 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:49.409 [Task submitter] INFO  nextflow.Session - [0a/5217d9] Submitted process > reverse (4)
+sept.-07 15:12:49.414 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:49.414 [Task submitter] INFO  nextflow.Session - [24/6b22bc] Submitted process > reverse (5)
+sept.-07 15:12:49.575 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 2; name: reverse (2); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/9e/ade7bc14d0aa4a4a27244e0f3a758e]
+sept.-07 15:12:49.579 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:49.580 [Task submitter] INFO  nextflow.Session - [6f/cd85a8] Submitted process > reverse (3)
+sept.-07 15:12:49.588 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 4; name: reverse (4); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/0a/5217d9552caddbbb78ac52c3201cde]
+sept.-07 15:12:49.592 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:49.592 [Task submitter] INFO  nextflow.Session - [c5/fc3bf2] Submitted process > reverse (6)
+sept.-07 15:12:49.596 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 5; name: reverse (5); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/24/6b22bc7a674600cc6d719ae4852d21]
+sept.-07 15:12:49.601 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:49.601 [Task submitter] INFO  nextflow.Session - [6c/02830d] Submitted process > reverse (7)
+sept.-07 15:12:49.658 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 1; name: reverse (1); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/f8/d3e9e83b8c48921415db09b5269844]
+sept.-07 15:12:49.662 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 3; name: reverse (3); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/6f/cd85a88e5dda4f0d25c156f9ef8536]
+sept.-07 15:12:49.665 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:49.666 [Task submitter] INFO  nextflow.Session - [11/7b49cd] Submitted process > reverse (9)
+sept.-07 15:12:49.670 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:49.670 [Task submitter] INFO  nextflow.Session - [78/f7902f] Submitted process > reverse (8)
+sept.-07 15:12:49.684 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 6; name: reverse (6); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/c5/fc3bf2d88867fe2be5db9cbc5e4226]
+sept.-07 15:12:49.689 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:49.689 [Task submitter] INFO  nextflow.Session - [6e/738e0e] Submitted process > reverse (11)
+sept.-07 15:12:49.706 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 7; name: reverse (7); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/6c/02830d0831139e9cc8614cca5ca443]
+sept.-07 15:12:49.712 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:49.712 [Task submitter] INFO  nextflow.Session - [ae/9a16d7] Submitted process > reverse (10)
+sept.-07 15:12:49.751 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 8; name: reverse (8); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/78/f7902ff45a2eebd60b867f2321e228]
+sept.-07 15:12:49.756 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:49.756 [Task submitter] INFO  nextflow.Session - [3f/b30bb8] Submitted process > reverse (12)
+sept.-07 15:12:49.771 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 9; name: reverse (9); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/11/7b49cdd37b7d8f21c313e1b0185a6b]
+sept.-07 15:12:49.775 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 11; name: reverse (11); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/6e/738e0e380404fd5c1bc4a0e9ac3460]
+sept.-07 15:12:49.778 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:49.778 [Task submitter] INFO  nextflow.Session - [b8/588ba2] Submitted process > reverse (13)
+sept.-07 15:12:49.782 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:49.782 [Task submitter] INFO  nextflow.Session - [9b/6dda9a] Submitted process > reverse (14)
+sept.-07 15:12:49.801 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 10; name: reverse (10); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/ae/9a16d73533c79b7baaa0c553c1e336]
+sept.-07 15:12:49.806 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:49.806 [Task submitter] INFO  nextflow.Session - [df/e572d3] Submitted process > reverse (15)
+sept.-07 15:12:49.839 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 12; name: reverse (12); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/3f/b30bb8856506dc6f139c4c7071ec9c]
+sept.-07 15:12:49.849 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:49.849 [Task submitter] INFO  nextflow.Session - [4a/b93b4f] Submitted process > reverse (16)
+sept.-07 15:12:49.860 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 13; name: reverse (13); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/b8/588ba210e560f247b49eaf40457824]
+sept.-07 15:12:49.863 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 14; name: reverse (14); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/9b/6dda9a80e97e7c14385a95e6b029cf]
+sept.-07 15:12:49.864 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:49.865 [Task submitter] INFO  nextflow.Session - [d1/bf1019] Submitted process > reverse (19)
+sept.-07 15:12:49.869 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:49.870 [Task submitter] INFO  nextflow.Session - [98/c4c91a] Submitted process > reverse (18)
+sept.-07 15:12:49.895 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 15; name: reverse (15); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/df/e572d3f9087ba13dfc9fd1dd04b5ed]
+sept.-07 15:12:49.899 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:49.899 [Task submitter] INFO  nextflow.Session - [cc/7258c7] Submitted process > reverse (20)
+sept.-07 15:12:49.935 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 16; name: reverse (16); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/4a/b93b4f246978a4fa0ae4bf8bff9fcd]
+sept.-07 15:12:49.941 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:49.941 [Task submitter] INFO  nextflow.Session - [0b/4475f1] Submitted process > reverse (17)
+sept.-07 15:12:49.950 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 19; name: reverse (19); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/d1/bf101976718a4dea1c6a58940c7f78]
+sept.-07 15:12:49.955 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:49.955 [Task submitter] INFO  nextflow.Session - [9b/a52178] Submitted process > reverse (21)
+sept.-07 15:12:49.958 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 18; name: reverse (18); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/98/c4c91ac4ab9ea2dd7baec08930a0dd]
+sept.-07 15:12:49.961 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:49.962 [Task submitter] INFO  nextflow.Session - [81/7edbbf] Submitted process > reverse (23)
+sept.-07 15:12:49.994 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 20; name: reverse (20); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/cc/7258c766f1f5c019556e3b02457085]
+sept.-07 15:12:49.997 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:49.997 [Task submitter] INFO  nextflow.Session - [ae/28d78c] Submitted process > reverse (22)
+sept.-07 15:12:50.030 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 17; name: reverse (17); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/0b/4475f18eb239005e41b5278c8ad987]
+sept.-07 15:12:50.033 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:50.033 [Task submitter] INFO  nextflow.Session - [17/ae82d7] Submitted process > reverse (25)
+sept.-07 15:12:50.036 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 21; name: reverse (21); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/9b/a5217875a82bf545ad49b0b2057ee0]
+sept.-07 15:12:50.040 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:50.040 [Task submitter] INFO  nextflow.Session - [8b/733aaa] Submitted process > reverse (26)
+sept.-07 15:12:50.047 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 23; name: reverse (23); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/81/7edbbf5a99bb5f1450d4a8ae09f0f7]
+sept.-07 15:12:50.050 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:50.050 [Task submitter] INFO  nextflow.Session - [3c/e6f732] Submitted process > reverse (24)
+sept.-07 15:12:50.088 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 22; name: reverse (22); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/ae/28d78c611f38debb29213acb0dc172]
+sept.-07 15:12:50.092 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:50.093 [Task submitter] INFO  nextflow.Session - [79/36bac6] Submitted process > reverse (27)
+sept.-07 15:12:50.116 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 25; name: reverse (25); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/17/ae82d7a6d20060bac2069945b6d348]
+sept.-07 15:12:50.119 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 26; name: reverse (26); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/8b/733aaa5bbe86d2ea984396d42800b0]
+sept.-07 15:12:50.121 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:50.122 [Task submitter] INFO  nextflow.Session - [03/a46cf3] Submitted process > reverse (29)
+sept.-07 15:12:50.128 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:50.128 [Task submitter] INFO  nextflow.Session - [21/857772] Submitted process > reverse (28)
+sept.-07 15:12:50.142 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 24; name: reverse (24); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/3c/e6f732a8127dd6be5d297ffaeb8481]
+sept.-07 15:12:50.145 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:50.145 [Task submitter] INFO  nextflow.Session - [3d/92db90] Submitted process > reverse (30)
+sept.-07 15:12:50.176 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 27; name: reverse (27); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/79/36bac6055052562e5a4b152cb1c414]
+sept.-07 15:12:50.182 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:50.182 [Task submitter] INFO  nextflow.Session - [5b/fedf1e] Submitted process > reverse (31)
+sept.-07 15:12:50.198 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 29; name: reverse (29); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/03/a46cf3f4eb2e8df162ecb2c2ff3a9d]
+sept.-07 15:12:50.203 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:50.203 [Task submitter] INFO  nextflow.Session - [42/cb424e] Submitted process > reverse (32)
+sept.-07 15:12:50.206 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 28; name: reverse (28); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/21/857772bc4c45a72339bbbb40478ba3]
+sept.-07 15:12:50.211 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:50.212 [Task submitter] INFO  nextflow.Session - [f1/f00d3f] Submitted process > reverse (33)
+sept.-07 15:12:50.228 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 30; name: reverse (30); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/3d/92db902fe6ed53a935763d9ed423fb]
+sept.-07 15:12:50.233 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:50.233 [Task submitter] INFO  nextflow.Session - [65/ed5817] Submitted process > reverse (34)
+sept.-07 15:12:50.263 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 31; name: reverse (31); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/5b/fedf1e54a725dec3330e9de896113c]
+sept.-07 15:12:50.266 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:50.266 [Task submitter] INFO  nextflow.Session - [96/788b82] Submitted process > reverse (35)
+sept.-07 15:12:50.284 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 32; name: reverse (32); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/42/cb424e115db3c2c6bd663462da7a54]
+sept.-07 15:12:50.291 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:50.291 [Task submitter] INFO  nextflow.Session - [e4/05eb3c] Submitted process > reverse (37)
+sept.-07 15:12:50.291 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 33; name: reverse (33); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/f1/f00d3f20da57041300ad1b517a9bef]
+sept.-07 15:12:50.296 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:50.296 [Task submitter] INFO  nextflow.Session - [75/0170fa] Submitted process > reverse (36)
+sept.-07 15:12:50.326 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 34; name: reverse (34); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/65/ed5817fbcb9b68f2759d4f9fbb0e86]
+sept.-07 15:12:50.332 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:50.332 [Task submitter] INFO  nextflow.Session - [80/62f7bf] Submitted process > reverse (38)
+sept.-07 15:12:50.344 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 35; name: reverse (35); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/96/788b82cb9736676d207d63c4ee6c9e]
+sept.-07 15:12:50.350 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:50.350 [Task submitter] INFO  nextflow.Session - [29/057187] Submitted process > reverse (40)
+sept.-07 15:12:50.369 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 36; name: reverse (36); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/75/0170fa9797c2b540b73f4fcd302229]
+sept.-07 15:12:50.377 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:50.377 [Task submitter] INFO  nextflow.Session - [8b/558d78] Submitted process > reverse (39)
+sept.-07 15:12:50.379 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 37; name: reverse (37); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/e4/05eb3cad5d20feb6351781649f193e]
+sept.-07 15:12:50.383 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:50.383 [Task submitter] INFO  nextflow.Session - [e9/1845bc] Submitted process > reverse (43)
+sept.-07 15:12:50.413 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 38; name: reverse (38); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/80/62f7bf62910b1c288deafb7c1f911f]
+sept.-07 15:12:50.417 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:50.417 [Task submitter] INFO  nextflow.Session - [67/7629f9] Submitted process > reverse (42)
+sept.-07 15:12:50.438 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 40; name: reverse (40); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/29/0571874de1bf304090c1e8490f8f75]
+sept.-07 15:12:50.442 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:50.442 [Task submitter] INFO  nextflow.Session - [f5/07a4d8] Submitted process > reverse (41)
+sept.-07 15:12:50.462 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 43; name: reverse (43); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/e9/1845bc9f576775fbaf847d4adca221]
+sept.-07 15:12:50.465 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:50.466 [Task submitter] INFO  nextflow.Session - [4d/994718] Submitted process > reverse (45)
+sept.-07 15:12:50.469 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 39; name: reverse (39); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/8b/558d788c6fb0c7c36c7e8014ba91c4]
+sept.-07 15:12:50.473 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:50.473 [Task submitter] INFO  nextflow.Session - [9d/03dceb] Submitted process > reverse (44)
+sept.-07 15:12:50.511 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 42; name: reverse (42); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/67/7629f9290f4039f86d7ef157076a9a]
+sept.-07 15:12:50.515 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:50.515 [Task submitter] INFO  nextflow.Session - [79/8f3fd9] Submitted process > reverse (46)
+sept.-07 15:12:50.523 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 41; name: reverse (41); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/f5/07a4d83a06c165d5304d1a6ff6fda1]
+sept.-07 15:12:50.530 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:50.531 [Task submitter] INFO  nextflow.Session - [96/ceff9e] Submitted process > reverse (47)
+sept.-07 15:12:50.547 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 45; name: reverse (45); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/4d/99471866f9bb64a03083ebaffc49e2]
+sept.-07 15:12:50.551 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:50.551 [Task submitter] INFO  nextflow.Session - [9b/729db9] Submitted process > reverse (48)
+sept.-07 15:12:50.556 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 44; name: reverse (44); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/9d/03dcebe72c611770647316666bab5e]
+sept.-07 15:12:50.561 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:50.561 [Task submitter] INFO  nextflow.Session - [5c/b35ecd] Submitted process > reverse (49)
+sept.-07 15:12:50.602 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 46; name: reverse (46); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/79/8f3fd911c84c6bf216835b7912c272]
+sept.-07 15:12:50.606 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:50.606 [Task submitter] INFO  nextflow.Session - [d5/41de2c] Submitted process > reverse (50)
+sept.-07 15:12:50.613 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 47; name: reverse (47); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/96/ceff9ec44402fcb21eb4dbdaecc4a7]
+sept.-07 15:12:50.617 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:50.617 [Task submitter] INFO  nextflow.Session - [4d/9828bc] Submitted process > reverse (54)
+sept.-07 15:12:50.629 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 48; name: reverse (48); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/9b/729db9e838e5e4991794c5f56aa12e]
+sept.-07 15:12:50.633 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:50.633 [Task submitter] INFO  nextflow.Session - [cb/0b63f7] Submitted process > reverse (51)
+sept.-07 15:12:50.645 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 49; name: reverse (49); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/5c/b35ecdd67c31b780796e8f1a43b92d]
+sept.-07 15:12:50.649 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:50.649 [Task submitter] INFO  nextflow.Session - [1d/457835] Submitted process > reverse (53)
+sept.-07 15:12:50.685 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 50; name: reverse (50); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/d5/41de2c59b504458f82eab34a7eef91]
+sept.-07 15:12:50.690 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:50.690 [Task submitter] INFO  nextflow.Session - [a1/4af3f6] Submitted process > reverse (55)
+sept.-07 15:12:50.701 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 54; name: reverse (54); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/4d/9828bc67d67ac14f81ce02abea8f11]
+sept.-07 15:12:50.705 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:50.705 [Task submitter] INFO  nextflow.Session - [35/726585] Submitted process > reverse (56)
+sept.-07 15:12:50.718 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 51; name: reverse (51); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/cb/0b63f7b69c23b3364505cc60dbebb1]
+sept.-07 15:12:50.722 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:50.722 [Task submitter] INFO  nextflow.Session - [14/33d3d6] Submitted process > reverse (52)
+sept.-07 15:12:50.732 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 53; name: reverse (53); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/1d/457835b33dbc5ac72871755dd526f3]
+sept.-07 15:12:50.736 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:50.736 [Task submitter] INFO  nextflow.Session - [fb/dd0d39] Submitted process > reverse (57)
+sept.-07 15:12:50.767 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 55; name: reverse (55); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/a1/4af3f61d57af38ebf63695102187ed]
+sept.-07 15:12:50.771 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:50.771 [Task submitter] INFO  nextflow.Session - [91/701d90] Submitted process > reverse (58)
+sept.-07 15:12:50.785 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 56; name: reverse (56); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/35/7265854927c2c1ce4e9e4d552af919]
+sept.-07 15:12:50.790 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:50.791 [Task submitter] INFO  nextflow.Session - [30/69da43] Submitted process > reverse (59)
+sept.-07 15:12:50.801 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 52; name: reverse (52); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/14/33d3d6c255e558a2027b1ccc3cee97]
+sept.-07 15:12:50.805 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:50.806 [Task submitter] INFO  nextflow.Session - [5b/2cada6] Submitted process > reverse (62)
+sept.-07 15:12:50.810 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 57; name: reverse (57); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/fb/dd0d39a184046ca1c75c8ef9eaec90]
+sept.-07 15:12:50.815 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:50.815 [Task submitter] INFO  nextflow.Session - [ac/d03fd2] Submitted process > reverse (61)
+sept.-07 15:12:50.856 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 58; name: reverse (58); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/91/701d9081dd554b3d3f53f91eff33c7]
+sept.-07 15:12:50.860 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:50.860 [Task submitter] INFO  nextflow.Session - [70/d6d445] Submitted process > reverse (60)
+sept.-07 15:12:50.865 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 59; name: reverse (59); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/30/69da43fab36ec7b75cbc6cca650ae2]
+sept.-07 15:12:50.869 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:50.869 [Task submitter] INFO  nextflow.Session - [35/46c9d5] Submitted process > reverse (65)
+sept.-07 15:12:50.889 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 62; name: reverse (62); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/5b/2cada6f6401cf2bc6656eeca9c89d7]
+sept.-07 15:12:50.894 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:50.895 [Task submitter] INFO  nextflow.Session - [c8/dc6be5] Submitted process > reverse (64)
+sept.-07 15:12:50.902 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 61; name: reverse (61); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/ac/d03fd2550ff89700bf1769c4e39692]
+sept.-07 15:12:50.907 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:50.907 [Task submitter] INFO  nextflow.Session - [36/062a95] Submitted process > reverse (63)
+sept.-07 15:12:50.943 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 60; name: reverse (60); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/70/d6d44594987d65cb89c81b3936f10c]
+sept.-07 15:12:50.948 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:50.948 [Task submitter] INFO  nextflow.Session - [b8/5a1600] Submitted process > reverse (67)
+sept.-07 15:12:50.953 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 65; name: reverse (65); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/35/46c9d56bc7108f72f19d208f7ba4db]
+sept.-07 15:12:50.957 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:50.957 [Task submitter] INFO  nextflow.Session - [3e/f0555c] Submitted process > reverse (68)
+sept.-07 15:12:50.970 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 64; name: reverse (64); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/c8/dc6be515c7a9878962b7c04ffee09b]
+sept.-07 15:12:50.974 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:50.974 [Task submitter] INFO  nextflow.Session - [f1/fd4bb7] Submitted process > reverse (69)
+sept.-07 15:12:50.988 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 63; name: reverse (63); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/36/062a95ec96c67ea89d21c15b9bb397]
+sept.-07 15:12:50.992 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:50.992 [Task submitter] INFO  nextflow.Session - [03/55a8e2] Submitted process > reverse (66)
+sept.-07 15:12:51.028 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 67; name: reverse (67); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/b8/5a1600c5b41d2e365c617c1a715cb0]
+sept.-07 15:12:51.032 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:51.032 [Task submitter] INFO  nextflow.Session - [03/d962d0] Submitted process > reverse (73)
+sept.-07 15:12:51.037 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 68; name: reverse (68); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/3e/f0555c44f38d522bc8e2bd89ed3373]
+sept.-07 15:12:51.042 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:51.043 [Task submitter] INFO  nextflow.Session - [ec/29cd64] Submitted process > reverse (70)
+sept.-07 15:12:51.063 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 69; name: reverse (69); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/f1/fd4bb7a98bd8b0e207fb47f01f8349]
+sept.-07 15:12:51.067 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:51.067 [Task submitter] INFO  nextflow.Session - [53/0274d0] Submitted process > reverse (71)
+sept.-07 15:12:51.079 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 66; name: reverse (66); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/03/55a8e208cfe9bca7fdbd613ae080ec]
+sept.-07 15:12:51.083 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:51.083 [Task submitter] INFO  nextflow.Session - [f6/9809aa] Submitted process > reverse (72)
+sept.-07 15:12:51.114 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 73; name: reverse (73); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/03/d962d0bc6c299e2162c9d145d9bd64]
+sept.-07 15:12:51.118 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:51.118 [Task submitter] INFO  nextflow.Session - [53/29d1ff] Submitted process > reverse (75)
+sept.-07 15:12:51.122 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 70; name: reverse (70); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/ec/29cd64c2f193a764fdc90a5fd82f37]
+sept.-07 15:12:51.126 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:51.126 [Task submitter] INFO  nextflow.Session - [d0/968eb8] Submitted process > reverse (76)
+sept.-07 15:12:51.151 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 71; name: reverse (71); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/53/0274d02b9eda7cc0890a82b2dc8ef6]
+sept.-07 15:12:51.155 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:51.156 [Task submitter] INFO  nextflow.Session - [ba/1cd029] Submitted process > reverse (74)
+sept.-07 15:12:51.166 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 72; name: reverse (72); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/f6/9809aa7e041f2c9b7ace8524aeb1d6]
+sept.-07 15:12:51.169 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:51.169 [Task submitter] INFO  nextflow.Session - [91/f1a69c] Submitted process > reverse (78)
+sept.-07 15:12:51.197 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 75; name: reverse (75); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/53/29d1ff26af159c99f12b31fef65666]
+sept.-07 15:12:51.202 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:51.202 [Task submitter] INFO  nextflow.Session - [9f/f92e47] Submitted process > reverse (77)
+sept.-07 15:12:51.210 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 76; name: reverse (76); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/d0/968eb88d9186af7e85ec8fcf197de5]
+sept.-07 15:12:51.215 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:51.215 [Task submitter] INFO  nextflow.Session - [4a/886ec6] Submitted process > reverse (80)
+sept.-07 15:12:51.229 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 74; name: reverse (74); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/ba/1cd029c6704261aa8821d0c8fdfe00]
+sept.-07 15:12:51.232 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:51.232 [Task submitter] INFO  nextflow.Session - [df/a4f4db] Submitted process > reverse (82)
+sept.-07 15:12:51.252 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 78; name: reverse (78); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/91/f1a69c712519f33bd17ba6ec67dd3c]
+sept.-07 15:12:51.256 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:51.257 [Task submitter] INFO  nextflow.Session - [95/2a2bce] Submitted process > reverse (81)
+sept.-07 15:12:51.314 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 77; name: reverse (77); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/9f/f92e475334feea9db8a74762f3b2b4]
+sept.-07 15:12:51.317 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 80; name: reverse (80); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/4a/886ec6694e9d580ea8f95ff482e9ee]
+sept.-07 15:12:51.319 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:51.319 [Task submitter] INFO  nextflow.Session - [56/e286cc] Submitted process > reverse (79)
+sept.-07 15:12:51.324 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 82; name: reverse (82); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/df/a4f4dbbf2443968936378acd3c33ff]
+sept.-07 15:12:51.325 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:51.325 [Task submitter] INFO  nextflow.Session - [14/249729] Submitted process > reverse (84)
+sept.-07 15:12:51.329 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:51.330 [Task submitter] INFO  nextflow.Session - [6b/63d9f6] Submitted process > reverse (85)
+sept.-07 15:12:51.381 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 81; name: reverse (81); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/95/2a2bcebea0bb9703501a1f0797f6ed]
+sept.-07 15:12:51.385 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:51.385 [Task submitter] INFO  nextflow.Session - [cf/37e295] Submitted process > reverse (83)
+sept.-07 15:12:51.403 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 79; name: reverse (79); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/56/e286ccd312b425134846bece873696]
+sept.-07 15:12:51.625 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 84; name: reverse (84); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/14/2497290d9b124500f57fb7df4bdb0d]
+sept.-07 15:12:51.631 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:51.631 [Task submitter] INFO  nextflow.Session - [90/398d7e] Submitted process > reverse (87)
+sept.-07 15:12:51.641 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:51.641 [Task submitter] INFO  nextflow.Session - [61/7ed404] Submitted process > reverse (88)
+sept.-07 15:12:51.645 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 85; name: reverse (85); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/6b/63d9f6d350a237cb28e749a340be5d]
+sept.-07 15:12:51.652 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:51.652 [Task submitter] INFO  nextflow.Session - [33/a4c727] Submitted process > reverse (86)
+sept.-07 15:12:51.771 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 83; name: reverse (83); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/cf/37e2959e1732afb62ea9b768fa1640]
+sept.-07 15:12:51.777 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:51.778 [Task submitter] INFO  nextflow.Session - [8e/794ce0] Submitted process > reverse (89)
+sept.-07 15:12:51.807 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 88; name: reverse (88); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/61/7ed404d2ddeb445464e0bd684b625b]
+sept.-07 15:12:52.023 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:52.024 [Task submitter] INFO  nextflow.Session - [8e/cfb449] Submitted process > reverse (90)
+sept.-07 15:12:52.027 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 87; name: reverse (87); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/90/398d7ee42e59fe757bcbf43d65b0cd]
+sept.-07 15:12:52.033 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 86; name: reverse (86); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/33/a4c72706d3f1dca02e03ee7bc1f86e]
+sept.-07 15:12:52.041 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:52.042 [Task submitter] INFO  nextflow.Session - [13/591c96] Submitted process > complement (1)
+sept.-07 15:12:52.052 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:52.053 [Task submitter] INFO  nextflow.Session - [e6/458a10] Submitted process > complement (2)
+sept.-07 15:12:52.167 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 89; name: reverse (89); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/8e/794ce0a0e95f9ec54d9356490adc49]
+sept.-07 15:12:52.172 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:52.178 [Task submitter] INFO  nextflow.Session - [96/4bd636] Submitted process > complement (3)
+sept.-07 15:12:52.224 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 90; name: reverse (90); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/8e/cfb449406344fe9777f69c259f64e1]
+sept.-07 15:12:52.232 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:52.232 [Task submitter] INFO  nextflow.Session - [38/8bd828] Submitted process > complement (4)
+sept.-07 15:12:52.233 [Actor Thread 3] DEBUG nextflow.Session - <<< barrier arrive (process: reverse)
+sept.-07 15:12:52.236 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 92; name: complement (2); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/e6/458a109a12b903da01106773879da7]
+sept.-07 15:12:52.242 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:52.242 [Task submitter] INFO  nextflow.Session - [6a/41d890] Submitted process > complement (5)
+sept.-07 15:12:52.293 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 91; name: complement (1); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/13/591c96e476dae7be859a5b758f6927]
+sept.-07 15:12:52.296 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 93; name: complement (3); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/96/4bd63681bb5e83a82c933d36af0c49]
+sept.-07 15:12:52.296 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:52.296 [Task submitter] INFO  nextflow.Session - [33/911ed9] Submitted process > complement (6)
+sept.-07 15:12:52.301 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:52.302 [Task submitter] INFO  nextflow.Session - [48/55d9fc] Submitted process > complement (7)
+sept.-07 15:12:52.317 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 94; name: complement (4); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/38/8bd8287409255c7db0b8834d25c63d]
+sept.-07 15:12:52.320 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:52.320 [Task submitter] INFO  nextflow.Session - [a4/09f837] Submitted process > complement (8)
+sept.-07 15:12:52.324 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 95; name: complement (5); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/6a/41d8909a5c503111e721f1ed6424b5]
+sept.-07 15:12:52.328 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:52.328 [Task submitter] INFO  nextflow.Session - [09/03dffc] Submitted process > complement (9)
+sept.-07 15:12:52.384 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 96; name: complement (6); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/33/911ed9e92da1c780a0009ca4771a10]
+sept.-07 15:12:52.387 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 97; name: complement (7); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/48/55d9fc84221cddbacc5b29e161339e]
+sept.-07 15:12:52.390 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:52.390 [Task submitter] INFO  nextflow.Session - [cd/f02d40] Submitted process > complement (10)
+sept.-07 15:12:52.394 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:52.394 [Task submitter] INFO  nextflow.Session - [81/e97958] Submitted process > complement (11)
+sept.-07 15:12:52.405 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 98; name: complement (8); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/a4/09f8379179ef740d435ba28b7f2571]
+sept.-07 15:12:52.411 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:52.411 [Task submitter] INFO  nextflow.Session - [c4/38bf0d] Submitted process > complement (12)
+sept.-07 15:12:52.416 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 99; name: complement (9); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/09/03dffcf6b86640272790de3cb98713]
+sept.-07 15:12:52.421 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:52.421 [Task submitter] INFO  nextflow.Session - [bc/25cbb1] Submitted process > complement (13)
+sept.-07 15:12:52.482 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 101; name: complement (11); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/81/e979584f8c9697ed8beff08b62f712]
+sept.-07 15:12:52.485 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:52.485 [Task submitter] INFO  nextflow.Session - [4e/14bcee] Submitted process > complement (14)
+sept.-07 15:12:52.493 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 100; name: complement (10); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/cd/f02d400b0d9f8461b71ef9fb8d86c8]
+sept.-07 15:12:52.498 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:52.498 [Task submitter] INFO  nextflow.Session - [a0/84341c] Submitted process > complement (15)
+sept.-07 15:12:52.507 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 102; name: complement (12); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/c4/38bf0d66f677eb8b13244c119e0609]
+sept.-07 15:12:52.512 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:52.512 [Task submitter] INFO  nextflow.Session - [07/b70a39] Submitted process > complement (16)
+sept.-07 15:12:52.575 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 103; name: complement (13); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/bc/25cbb1c90dc69a93c505dac5d3bb43]
+sept.-07 15:12:52.580 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:52.580 [Task submitter] INFO  nextflow.Session - [d1/c2951a] Submitted process > complement (17)
+sept.-07 15:12:52.582 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 104; name: complement (14); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/4e/14bceee645c74c16d0c44b00af5883]
+sept.-07 15:12:52.585 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:52.586 [Task submitter] INFO  nextflow.Session - [2d/0b3ebf] Submitted process > complement (18)
+sept.-07 15:12:52.586 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 105; name: complement (15); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/a0/84341cbe1339183269553fe8f2073b]
+sept.-07 15:12:52.591 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:52.591 [Task submitter] INFO  nextflow.Session - [11/f4e026] Submitted process > complement (19)
+sept.-07 15:12:52.598 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 106; name: complement (16); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/07/b70a3979b10e69a6556c843fa29d97]
+sept.-07 15:12:52.602 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:52.602 [Task submitter] INFO  nextflow.Session - [bd/307a69] Submitted process > complement (20)
+sept.-07 15:12:52.667 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 107; name: complement (17); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/d1/c2951a9722c94e881f726ae6e85dcf]
+sept.-07 15:12:52.672 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:52.672 [Task submitter] INFO  nextflow.Session - [83/304054] Submitted process > complement (21)
+sept.-07 15:12:52.672 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 109; name: complement (19); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/11/f4e026733e0c3be14cf69167faf2ad]
+sept.-07 15:12:52.679 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:52.679 [Task submitter] INFO  nextflow.Session - [40/ec0773] Submitted process > complement (22)
+sept.-07 15:12:52.685 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 108; name: complement (18); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/2d/0b3ebf8ea66ecd1ba15471d44bdc8f]
+sept.-07 15:12:52.688 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:52.689 [Task submitter] INFO  nextflow.Session - [43/5156b9] Submitted process > complement (23)
+sept.-07 15:12:52.698 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 110; name: complement (20); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/bd/307a69a4ef6975efc2dce9806faed3]
+sept.-07 15:12:52.705 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:52.705 [Task submitter] INFO  nextflow.Session - [3a/93bdd3] Submitted process > complement (24)
+sept.-07 15:12:52.753 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 111; name: complement (21); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/83/30405496f16f0db0d5de9ef6eb6d5b]
+sept.-07 15:12:52.758 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:52.758 [Task submitter] INFO  nextflow.Session - [28/27d57e] Submitted process > complement (25)
+sept.-07 15:12:52.767 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 112; name: complement (22); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/40/ec07732e19b0ba103a0840333c724b]
+sept.-07 15:12:52.771 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:52.771 [Task submitter] INFO  nextflow.Session - [63/b9861f] Submitted process > complement (26)
+sept.-07 15:12:52.779 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 113; name: complement (23); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/43/5156b92a4bd682c31f236353d2eb38]
+sept.-07 15:12:52.782 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:52.782 [Task submitter] INFO  nextflow.Session - [94/b4b336] Submitted process > complement (27)
+sept.-07 15:12:52.800 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 114; name: complement (24); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/3a/93bdd312aa9adf1f1a8fb9662bfa0b]
+sept.-07 15:12:52.804 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:52.804 [Task submitter] INFO  nextflow.Session - [6e/b8a1c9] Submitted process > complement (28)
+sept.-07 15:12:52.843 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 116; name: complement (26); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/63/b9861f5f20199a710e16c2ce6de6dd]
+sept.-07 15:12:52.846 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:52.847 [Task submitter] INFO  nextflow.Session - [95/9dda8a] Submitted process > complement (29)
+sept.-07 15:12:52.849 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 115; name: complement (25); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/28/27d57e140b0149a363919359f2addd]
+sept.-07 15:12:52.854 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:52.854 [Task submitter] INFO  nextflow.Session - [f3/73f05d] Submitted process > complement (30)
+sept.-07 15:12:52.865 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 117; name: complement (27); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/94/b4b33698f6abef421ff86b8ca289a0]
+sept.-07 15:12:52.868 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:52.868 [Task submitter] INFO  nextflow.Session - [f2/1da826] Submitted process > complement (31)
+sept.-07 15:12:52.886 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 118; name: complement (28); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/6e/b8a1c97f8b4567e6b136792f5b35a9]
+sept.-07 15:12:52.890 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:52.890 [Task submitter] INFO  nextflow.Session - [97/700ded] Submitted process > complement (32)
+sept.-07 15:12:52.925 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 119; name: complement (29); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/95/9dda8af8b4dd1c1d867cc7aa6725a2]
+sept.-07 15:12:52.930 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:52.930 [Task submitter] INFO  nextflow.Session - [7c/7bd78c] Submitted process > complement (33)
+sept.-07 15:12:52.933 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 120; name: complement (30); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/f3/73f05df10337ddcaac8462eccc5a18]
+sept.-07 15:12:52.937 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:52.937 [Task submitter] INFO  nextflow.Session - [4d/83a926] Submitted process > complement (34)
+sept.-07 15:12:52.948 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 121; name: complement (31); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/f2/1da826abcf640e3cb0c9d246235363]
+sept.-07 15:12:52.951 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:52.951 [Task submitter] INFO  nextflow.Session - [a7/1a14d4] Submitted process > complement (35)
+sept.-07 15:12:52.978 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 122; name: complement (32); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/97/700ded59c7911ee005f3cf763856d2]
+sept.-07 15:12:52.982 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:52.982 [Task submitter] INFO  nextflow.Session - [4f/bfedb9] Submitted process > complement (36)
+sept.-07 15:12:53.011 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 123; name: complement (33); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/7c/7bd78cde1592b54d2b84f69e41cac7]
+sept.-07 15:12:53.015 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:53.016 [Task submitter] INFO  nextflow.Session - [7e/197b45] Submitted process > complement (37)
+sept.-07 15:12:53.019 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 124; name: complement (34); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/4d/83a9263819dae80076628c954bec94]
+sept.-07 15:12:53.023 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:53.024 [Task submitter] INFO  nextflow.Session - [50/ec8253] Submitted process > complement (38)
+sept.-07 15:12:53.040 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 125; name: complement (35); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/a7/1a14d4c210e12914dbbbb00f6d1508]
+sept.-07 15:12:53.047 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:53.047 [Task submitter] INFO  nextflow.Session - [da/430d45] Submitted process > complement (39)
+sept.-07 15:12:53.071 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 126; name: complement (36); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/4f/bfedb9e9949f6d0f473dc049b6435d]
+sept.-07 15:12:53.074 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:53.074 [Task submitter] INFO  nextflow.Session - [78/533ad8] Submitted process > complement (40)
+sept.-07 15:12:53.103 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 127; name: complement (37); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/7e/197b45ad277ccea837fa678f1d60d2]
+sept.-07 15:12:53.106 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 128; name: complement (38); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/50/ec82533c822e779f941bb2a9378167]
+sept.-07 15:12:53.108 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:53.108 [Task submitter] INFO  nextflow.Session - [ee/31492e] Submitted process > complement (41)
+sept.-07 15:12:53.114 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:53.114 [Task submitter] INFO  nextflow.Session - [2a/9778f9] Submitted process > complement (42)
+sept.-07 15:12:53.127 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 129; name: complement (39); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/da/430d4588e1accdb696716e584249cb]
+sept.-07 15:12:53.131 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:53.131 [Task submitter] INFO  nextflow.Session - [3e/b2449c] Submitted process > complement (43)
+sept.-07 15:12:53.167 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 130; name: complement (40); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/78/533ad822511c2cbb0a53a453175c40]
+sept.-07 15:12:53.171 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:53.171 [Task submitter] INFO  nextflow.Session - [7f/2e7ec3] Submitted process > complement (44)
+sept.-07 15:12:53.194 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 132; name: complement (42); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/2a/9778f94b35ab291386db7e3a576c90]
+sept.-07 15:12:53.198 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:53.198 [Task submitter] INFO  nextflow.Session - [5d/57a011] Submitted process > complement (45)
+sept.-07 15:12:53.201 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 131; name: complement (41); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/ee/31492e4a2b2e253f2b5b83e5b76f2b]
+sept.-07 15:12:53.205 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:53.205 [Task submitter] INFO  nextflow.Session - [43/bfc808] Submitted process > complement (46)
+sept.-07 15:12:53.222 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 133; name: complement (43); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/3e/b2449c1e0b350a6b8938c3ea63c75b]
+sept.-07 15:12:53.225 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:53.225 [Task submitter] INFO  nextflow.Session - [86/be1713] Submitted process > complement (47)
+sept.-07 15:12:53.252 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 134; name: complement (44); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/7f/2e7ec39bd03b02235844edc76bc885]
+sept.-07 15:12:53.258 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:53.258 [Task submitter] INFO  nextflow.Session - [d6/28af30] Submitted process > complement (48)
+sept.-07 15:12:53.281 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 136; name: complement (46); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/43/bfc8081e50fc507485b07e8808cc32]
+sept.-07 15:12:53.285 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:53.285 [Task submitter] INFO  nextflow.Session - [0e/9cc0c7] Submitted process > complement (49)
+sept.-07 15:12:53.307 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 135; name: complement (45); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/5d/57a011bcdafd7c335499c8ef15d7ef]
+sept.-07 15:12:53.310 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 137; name: complement (47); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/86/be1713565fe69757267ca3be8608be]
+sept.-07 15:12:53.311 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:53.311 [Task submitter] INFO  nextflow.Session - [b2/c9308d] Submitted process > complement (50)
+sept.-07 15:12:53.315 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:53.315 [Task submitter] INFO  nextflow.Session - [54/a0989e] Submitted process > complement (51)
+sept.-07 15:12:53.345 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 138; name: complement (48); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/d6/28af3006090666334c250af9958be7]
+sept.-07 15:12:53.349 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:53.349 [Task submitter] INFO  nextflow.Session - [f8/26bb82] Submitted process > complement (52)
+sept.-07 15:12:53.362 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 139; name: complement (49); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/0e/9cc0c74e33427d6e0a3cc6f4dc9c44]
+sept.-07 15:12:53.366 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:53.366 [Task submitter] INFO  nextflow.Session - [bb/4c0a67] Submitted process > complement (53)
+sept.-07 15:12:53.389 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 140; name: complement (50); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/b2/c9308df6e5afdb852e8092138b7766]
+sept.-07 15:12:53.394 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:53.394 [Task submitter] INFO  nextflow.Session - [3c/602a53] Submitted process > complement (54)
+sept.-07 15:12:53.400 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 141; name: complement (51); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/54/a0989e2f9deb9694d5bcf858ac3988]
+sept.-07 15:12:53.404 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:53.404 [Task submitter] INFO  nextflow.Session - [a1/4741bb] Submitted process > complement (55)
+sept.-07 15:12:53.432 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 142; name: complement (52); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/f8/26bb8212a730b54d31cff515103f66]
+sept.-07 15:12:53.435 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:53.435 [Task submitter] INFO  nextflow.Session - [c7/b0a623] Submitted process > complement (56)
+sept.-07 15:12:53.464 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 143; name: complement (53); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/bb/4c0a67ac5984d9614206e94412e3f4]
+sept.-07 15:12:53.468 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:53.468 [Task submitter] INFO  nextflow.Session - [8a/8d3d2f] Submitted process > complement (57)
+sept.-07 15:12:53.476 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 144; name: complement (54); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/3c/602a53e2c9f72161ffe97d4a563bc4]
+sept.-07 15:12:53.481 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:53.481 [Task submitter] INFO  nextflow.Session - [4a/d022d8] Submitted process > complement (58)
+sept.-07 15:12:53.490 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 145; name: complement (55); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/a1/4741bbafa00af1932cae6deecded1a]
+sept.-07 15:12:53.494 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:53.494 [Task submitter] INFO  nextflow.Session - [5b/1f7c4e] Submitted process > complement (59)
+sept.-07 15:12:53.515 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 146; name: complement (56); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/c7/b0a6239ef34e9c2d2a6063c3f5c8ce]
+sept.-07 15:12:53.520 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:53.520 [Task submitter] INFO  nextflow.Session - [e5/c080a9] Submitted process > complement (60)
+sept.-07 15:12:53.548 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 147; name: complement (57); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/8a/8d3d2f2ad8c21c500a7aedb642682b]
+sept.-07 15:12:53.552 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:53.552 [Task submitter] INFO  nextflow.Session - [d9/eab374] Submitted process > complement (61)
+sept.-07 15:12:53.560 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 148; name: complement (58); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/4a/d022d86ba8d076617ae64dc4b46560]
+sept.-07 15:12:53.564 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:53.564 [Task submitter] INFO  nextflow.Session - [c9/e8e7ef] Submitted process > complement (62)
+sept.-07 15:12:53.581 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 149; name: complement (59); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/5b/1f7c4efc877cf889b2c2c07d2315c6]
+sept.-07 15:12:53.585 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:53.585 [Task submitter] INFO  nextflow.Session - [b5/174a7a] Submitted process > complement (63)
+sept.-07 15:12:53.607 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 150; name: complement (60); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/e5/c080a99ff6a37825a76652151cdb68]
+sept.-07 15:12:53.610 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:53.610 [Task submitter] INFO  nextflow.Session - [14/b2d302] Submitted process > complement (64)
+sept.-07 15:12:53.628 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 151; name: complement (61); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/d9/eab3743fa71fe0c43bdaba2abf460f]
+sept.-07 15:12:53.633 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:53.633 [Task submitter] INFO  nextflow.Session - [8d/61e77f] Submitted process > complement (65)
+sept.-07 15:12:53.654 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 152; name: complement (62); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/c9/e8e7ef60cb91ee50d86db212d7c96e]
+sept.-07 15:12:53.659 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:53.659 [Task submitter] INFO  nextflow.Session - [32/3b1c86] Submitted process > complement (66)
+sept.-07 15:12:53.672 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 153; name: complement (63); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/b5/174a7a9473e6e5e801d87cfc9056b6]
+sept.-07 15:12:53.676 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:53.676 [Task submitter] INFO  nextflow.Session - [c0/d1b923] Submitted process > complement (67)
+sept.-07 15:12:53.702 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 154; name: complement (64); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/14/b2d3020658408ce732fb307bd60915]
+sept.-07 15:12:53.706 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:53.706 [Task submitter] INFO  nextflow.Session - [54/a0c973] Submitted process > complement (68)
+sept.-07 15:12:53.717 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 155; name: complement (65); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/8d/61e77f9af89b3a3a5321edbb1443c1]
+sept.-07 15:12:53.720 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:53.721 [Task submitter] INFO  nextflow.Session - [44/345fe5] Submitted process > complement (69)
+sept.-07 15:12:53.743 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 156; name: complement (66); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/32/3b1c86feef16f5b144c618100b6cfd]
+sept.-07 15:12:53.746 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:53.747 [Task submitter] INFO  nextflow.Session - [b7/2e7b25] Submitted process > complement (70)
+sept.-07 15:12:53.764 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 157; name: complement (67); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/c0/d1b9233f0ca8c149b04d723c2f3640]
+sept.-07 15:12:53.767 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:53.767 [Task submitter] INFO  nextflow.Session - [ea/17254c] Submitted process > complement (71)
+sept.-07 15:12:53.783 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 158; name: complement (68); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/54/a0c97348c76b306b157bf332ebe5bb]
+sept.-07 15:12:53.787 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:53.787 [Task submitter] INFO  nextflow.Session - [b3/7eccc9] Submitted process > complement (72)
+sept.-07 15:12:53.808 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 159; name: complement (69); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/44/345fe5fc67cd857bfb258f9c293e5d]
+sept.-07 15:12:53.812 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:53.812 [Task submitter] INFO  nextflow.Session - [54/a5f499] Submitted process > complement (73)
+sept.-07 15:12:53.833 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 160; name: complement (70); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/b7/2e7b25145b18be7e32e2182bfb55c2]
+sept.-07 15:12:53.836 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:53.836 [Task submitter] INFO  nextflow.Session - [f8/f909b6] Submitted process > complement (74)
+sept.-07 15:12:53.850 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 161; name: complement (71); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/ea/17254c4923b2150bdf7582602f86a1]
+sept.-07 15:12:53.854 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:53.854 [Task submitter] INFO  nextflow.Session - [ea/85a6ab] Submitted process > complement (75)
+sept.-07 15:12:53.877 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 162; name: complement (72); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/b3/7eccc94de240ff6354e91a0acc79ae]
+sept.-07 15:12:53.881 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:53.881 [Task submitter] INFO  nextflow.Session - [a3/1beebd] Submitted process > complement (76)
+sept.-07 15:12:53.895 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 163; name: complement (73); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/54/a5f4992d57893f3a1fbb6d2657237c]
+sept.-07 15:12:53.900 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:53.900 [Task submitter] INFO  nextflow.Session - [2f/13f05b] Submitted process > complement (77)
+sept.-07 15:12:53.913 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 164; name: complement (74); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/f8/f909b62f37cea7bcdaef83cbe0d5b4]
+sept.-07 15:12:53.917 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:53.917 [Task submitter] INFO  nextflow.Session - [69/306b65] Submitted process > complement (78)
+sept.-07 15:12:53.943 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 165; name: complement (75); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/ea/85a6ab13dc3c05b5b279d917403d2e]
+sept.-07 15:12:53.948 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:53.948 [Task submitter] INFO  nextflow.Session - [97/d8489d] Submitted process > complement (79)
+sept.-07 15:12:53.958 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 166; name: complement (76); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/a3/1beebd9335479394c86e681b9b6cd7]
+sept.-07 15:12:53.961 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:53.962 [Task submitter] INFO  nextflow.Session - [37/181ba7] Submitted process > complement (80)
+sept.-07 15:12:53.988 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 167; name: complement (77); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/2f/13f05bdcbc5d7e75959d1ced5090f1]
+sept.-07 15:12:53.992 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:53.992 [Task submitter] INFO  nextflow.Session - [44/7428ed] Submitted process > complement (81)
+sept.-07 15:12:53.997 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 168; name: complement (78); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/69/306b65b474e79990eb03907c18be5d]
+sept.-07 15:12:54.001 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:54.001 [Task submitter] INFO  nextflow.Session - [83/4c0235] Submitted process > complement (82)
+sept.-07 15:12:54.025 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 169; name: complement (79); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/97/d8489daf712ac471d89055aae4642a]
+sept.-07 15:12:54.029 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:54.029 [Task submitter] INFO  nextflow.Session - [90/460e31] Submitted process > complement (83)
+sept.-07 15:12:54.055 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 170; name: complement (80); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/37/181ba7bf765c615cc0d23098ee1235]
+sept.-07 15:12:54.059 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:54.060 [Task submitter] INFO  nextflow.Session - [54/aac155] Submitted process > complement (84)
+sept.-07 15:12:54.071 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 171; name: complement (81); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/44/7428edeb69a704932da9c6be1c9042]
+sept.-07 15:12:54.073 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:54.074 [Task submitter] INFO  nextflow.Session - [7e/7fdee4] Submitted process > complement (85)
+sept.-07 15:12:54.088 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 172; name: complement (82); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/83/4c02354789e0198b3ed9dc0b45716b]
+sept.-07 15:12:54.092 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:54.092 [Task submitter] INFO  nextflow.Session - [e4/cc20a1] Submitted process > complement (86)
+sept.-07 15:12:54.114 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 173; name: complement (83); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/90/460e31e303c1705746876ce5621320]
+sept.-07 15:12:54.117 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:54.117 [Task submitter] INFO  nextflow.Session - [89/54dc9e] Submitted process > complement (87)
+sept.-07 15:12:54.148 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 174; name: complement (84); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/54/aac155052859f26fe3fc6b99de45a0]
+sept.-07 15:12:54.151 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 175; name: complement (85); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/7e/7fdee49975bb4bbcec3fb5d2f09adf]
+sept.-07 15:12:54.151 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:54.152 [Task submitter] INFO  nextflow.Session - [83/b843ed] Submitted process > complement (88)
+sept.-07 15:12:54.157 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:54.157 [Task submitter] INFO  nextflow.Session - [38/741b4a] Submitted process > complement (89)
+sept.-07 15:12:54.177 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 176; name: complement (86); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/e4/cc20a1cf9ccf5f7024b96936bd313c]
+sept.-07 15:12:54.181 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:54.181 [Task submitter] INFO  nextflow.Session - [7a/4e7d70] Submitted process > complement (90)
+sept.-07 15:12:54.196 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 177; name: complement (87); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/89/54dc9e730100d3b63294ff2f7a8fbc]
+sept.-07 15:12:54.201 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:54.201 [Task submitter] INFO  nextflow.Session - [43/bb697a] Submitted process > countGC (1)
+sept.-07 15:12:54.231 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 179; name: complement (89); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/38/741b4a37ebb6318558b8742abb2bdf]
+sept.-07 15:12:54.235 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:54.235 [Task submitter] INFO  nextflow.Session - [1a/00940e] Submitted process > countGC (2)
+sept.-07 15:12:54.239 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 178; name: complement (88); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/83/b843ed448f65923e1bd632ac1eea3d]
+sept.-07 15:12:54.243 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:54.243 [Task submitter] INFO  nextflow.Session - [02/c663d2] Submitted process > countGC (3)
+sept.-07 15:12:54.265 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 180; name: complement (90); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/7a/4e7d70247a02ee5a08d8ef64efb735]
+sept.-07 15:12:54.267 [Actor Thread 9] DEBUG nextflow.Session - <<< barrier arrive (process: complement)
+sept.-07 15:12:54.270 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:54.270 [Task submitter] INFO  nextflow.Session - [e7/9cf7fd] Submitted process > countGC (4)
+sept.-07 15:12:54.277 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 181; name: countGC (1); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/43/bb697a30ac58a0cf2f65d2d8912ea3]
+sept.-07 15:12:54.281 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:54.281 [Task submitter] INFO  nextflow.Session - [d4/131cf0] Submitted process > countGC (5)
+sept.-07 15:12:54.312 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 182; name: countGC (2); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/1a/00940ef88ce4ebd6e24597b4af62c5]
+sept.-07 15:12:54.317 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:54.317 [Task submitter] INFO  nextflow.Session - [a3/b4c96f] Submitted process > countGC (6)
+sept.-07 15:12:54.332 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 183; name: countGC (3); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/02/c663d2b0601b7bc0657c37d6a20935]
+sept.-07 15:12:54.335 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:54.335 [Task submitter] INFO  nextflow.Session - [1f/39af9f] Submitted process > countGC (7)
+sept.-07 15:12:54.349 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 184; name: countGC (4); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/e7/9cf7fd1cc9aadf22722b40481fcf4c]
+sept.-07 15:12:54.353 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:54.353 [Task submitter] INFO  nextflow.Session - [fe/2f073d] Submitted process > countGC (8)
+sept.-07 15:12:54.359 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 185; name: countGC (5); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/d4/131cf0e7216041522c72b16bd26c04]
+sept.-07 15:12:54.362 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:54.362 [Task submitter] INFO  nextflow.Session - [bb/388f2b] Submitted process > countGC (9)
+sept.-07 15:12:54.396 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 186; name: countGC (6); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/a3/b4c96fc5fda196f6d3e56552d0ca10]
+sept.-07 15:12:54.400 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:54.400 [Task submitter] INFO  nextflow.Session - [a4/99fe99] Submitted process > countGC (10)
+sept.-07 15:12:54.421 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 187; name: countGC (7); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/1f/39af9f9831b68a5e0c0a0a4a37d90a]
+sept.-07 15:12:54.424 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:54.424 [Task submitter] INFO  nextflow.Session - [99/983a0f] Submitted process > countGC (11)
+sept.-07 15:12:54.433 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 188; name: countGC (8); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/fe/2f073db2aa9733ddf7de5c8c6034cd]
+sept.-07 15:12:54.438 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:54.438 [Task submitter] INFO  nextflow.Session - [b6/355fff] Submitted process > countGC (12)
+sept.-07 15:12:54.444 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 189; name: countGC (9); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/bb/388f2b47b1da61de70c2d2c221fd83]
+sept.-07 15:12:54.449 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:54.449 [Task submitter] INFO  nextflow.Session - [52/b08fd2] Submitted process > countGC (13)
+sept.-07 15:12:54.488 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 190; name: countGC (10); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/a4/99fe99684f0a84992a2122684d447a]
+sept.-07 15:12:54.491 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:54.491 [Task submitter] INFO  nextflow.Session - [1a/befb5b] Submitted process > countGC (14)
+sept.-07 15:12:54.505 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 191; name: countGC (11); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/99/983a0fbcf47e5d1461f88b25bd481e]
+sept.-07 15:12:54.508 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:54.508 [Task submitter] INFO  nextflow.Session - [82/044ff7] Submitted process > countGC (15)
+sept.-07 15:12:54.530 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 192; name: countGC (12); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/b6/355fff346d2e177f1e50d90fe5f5f4]
+sept.-07 15:12:54.534 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:54.534 [Task submitter] INFO  nextflow.Session - [1a/35ec45] Submitted process > countGC (16)
+sept.-07 15:12:54.540 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 193; name: countGC (13); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/52/b08fd25fa5d99c677597706d6ac74f]
+sept.-07 15:12:54.544 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:54.544 [Task submitter] INFO  nextflow.Session - [2b/01e9b3] Submitted process > countGC (17)
+sept.-07 15:12:54.570 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 194; name: countGC (14); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/1a/befb5b067ba69094ebb1c8672e5141]
+sept.-07 15:12:54.573 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:54.574 [Task submitter] INFO  nextflow.Session - [64/5ec293] Submitted process > countGC (18)
+sept.-07 15:12:54.596 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 195; name: countGC (15); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/82/044ff7549d7d6c61ee4eb8e0a9d387]
+sept.-07 15:12:54.600 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:54.600 [Task submitter] INFO  nextflow.Session - [c7/631bdb] Submitted process > countGC (19)
+sept.-07 15:12:54.615 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 196; name: countGC (16); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/1a/35ec45ea7493f6ab57611142b16f88]
+sept.-07 15:12:54.622 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:54.622 [Task submitter] INFO  nextflow.Session - [5a/9d6aa7] Submitted process > countGC (20)
+sept.-07 15:12:54.627 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 197; name: countGC (17); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/2b/01e9b32959f6b6d1997b55774f3dec]
+sept.-07 15:12:54.631 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:54.631 [Task submitter] INFO  nextflow.Session - [9b/c4dfa5] Submitted process > countGC (21)
+sept.-07 15:12:54.657 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 198; name: countGC (18); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/64/5ec2934c539a8fb125a1bdf27ef7b5]
+sept.-07 15:12:54.660 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:54.661 [Task submitter] INFO  nextflow.Session - [d5/6b5298] Submitted process > countGC (22)
+sept.-07 15:12:54.678 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 199; name: countGC (19); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/c7/631bdb886cbe4d895c7c580cf4a905]
+sept.-07 15:12:54.683 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:54.683 [Task submitter] INFO  nextflow.Session - [cf/c0c838] Submitted process > countGC (23)
+sept.-07 15:12:54.704 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 200; name: countGC (20); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/5a/9d6aa7a78a8f5b9763366ae4d345fd]
+sept.-07 15:12:54.707 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:54.707 [Task submitter] INFO  nextflow.Session - [6b/d346c6] Submitted process > countGC (24)
+sept.-07 15:12:54.719 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 201; name: countGC (21); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/9b/c4dfa537f01372048fc5958f435757]
+sept.-07 15:12:54.722 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:54.723 [Task submitter] INFO  nextflow.Session - [8e/29739c] Submitted process > countGC (25)
+sept.-07 15:12:54.743 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 202; name: countGC (22); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/d5/6b52980bf7bb8cf947de27db1a6512]
+sept.-07 15:12:54.749 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:54.749 [Task submitter] INFO  nextflow.Session - [f4/ee5c91] Submitted process > countGC (26)
+sept.-07 15:12:54.765 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 203; name: countGC (23); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/cf/c0c8383cbde9de48486bab1a56185c]
+sept.-07 15:12:54.768 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:54.769 [Task submitter] INFO  nextflow.Session - [b6/09b78d] Submitted process > countGC (27)
+sept.-07 15:12:54.793 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 204; name: countGC (24); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/6b/d346c61de1b68169153893503efd4f]
+sept.-07 15:12:54.797 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:54.797 [Task submitter] INFO  nextflow.Session - [1b/77da53] Submitted process > countGC (28)
+sept.-07 15:12:54.807 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 205; name: countGC (25); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/8e/29739ce40810071836a47c9281ed13]
+sept.-07 15:12:54.811 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:54.811 [Task submitter] INFO  nextflow.Session - [9e/5ea2be] Submitted process > countGC (29)
+sept.-07 15:12:54.832 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 206; name: countGC (26); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/f4/ee5c9167ee8613e4e7a83f739a5e4a]
+sept.-07 15:12:54.837 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:54.837 [Task submitter] INFO  nextflow.Session - [35/96606d] Submitted process > countGC (30)
+sept.-07 15:12:54.848 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 207; name: countGC (27); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/b6/09b78d43279e92b6f4461aee6ff78e]
+sept.-07 15:12:54.852 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:54.852 [Task submitter] INFO  nextflow.Session - [c7/541dbc] Submitted process > countGC (31)
+sept.-07 15:12:54.877 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 208; name: countGC (28); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/1b/77da538800f269397c660ef69aafa8]
+sept.-07 15:12:54.883 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:54.883 [Task submitter] INFO  nextflow.Session - [ac/6d35eb] Submitted process > countGC (32)
+sept.-07 15:12:54.888 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 209; name: countGC (29); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/9e/5ea2bef870d386a64a1fd036850814]
+sept.-07 15:12:54.892 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:54.892 [Task submitter] INFO  nextflow.Session - [ea/d12df4] Submitted process > countGC (33)
+sept.-07 15:12:54.922 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 210; name: countGC (30); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/35/96606ddd1db1fd82808cd7cc4564f5]
+sept.-07 15:12:54.926 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:54.926 [Task submitter] INFO  nextflow.Session - [aa/1541fd] Submitted process > countGC (34)
+sept.-07 15:12:54.938 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 211; name: countGC (31); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/c7/541dbc0dcba85732388a5f2f023c7d]
+sept.-07 15:12:54.943 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:54.943 [Task submitter] INFO  nextflow.Session - [7d/10a9c3] Submitted process > countGC (35)
+sept.-07 15:12:54.959 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 212; name: countGC (32); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/ac/6d35eb6966fffde3144777ccb45eb3]
+sept.-07 15:12:54.964 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:54.964 [Task submitter] INFO  nextflow.Session - [75/d5e73c] Submitted process > countGC (36)
+sept.-07 15:12:54.973 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 213; name: countGC (33); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/ea/d12df4d2b3a08e4858147111300217]
+sept.-07 15:12:54.977 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:54.977 [Task submitter] INFO  nextflow.Session - [1c/f8c94f] Submitted process > countGC (37)
+sept.-07 15:12:55.007 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 214; name: countGC (34); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/aa/1541fd3207798114e283953c3c2750]
+sept.-07 15:12:55.010 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:55.010 [Task submitter] INFO  nextflow.Session - [b1/9175ca] Submitted process > countGC (38)
+sept.-07 15:12:55.020 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 215; name: countGC (35); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/7d/10a9c3b5ff57a86241188d9a239cfb]
+sept.-07 15:12:55.023 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:55.023 [Task submitter] INFO  nextflow.Session - [c7/040b60] Submitted process > countGC (39)
+sept.-07 15:12:55.046 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 216; name: countGC (36); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/75/d5e73c3f31b1199a67b0e2b7b30e5f]
+sept.-07 15:12:55.049 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:55.050 [Task submitter] INFO  nextflow.Session - [45/ef3997] Submitted process > countGC (40)
+sept.-07 15:12:55.059 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 217; name: countGC (37); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/1c/f8c94f8de1666655af5eea5ade1fa5]
+sept.-07 15:12:55.063 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:55.063 [Task submitter] INFO  nextflow.Session - [b1/7dbd3a] Submitted process > countGC (41)
+sept.-07 15:12:55.088 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 218; name: countGC (38); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/b1/9175ca4ba44c1d258a6855d6940ef3]
+sept.-07 15:12:55.092 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:55.092 [Task submitter] INFO  nextflow.Session - [4b/511320] Submitted process > countGC (42)
+sept.-07 15:12:55.103 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 219; name: countGC (39); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/c7/040b607f152f3590637b0f5ed40170]
+sept.-07 15:12:55.106 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:55.106 [Task submitter] INFO  nextflow.Session - [dd/b28259] Submitted process > countGC (43)
+sept.-07 15:12:55.129 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 220; name: countGC (40); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/45/ef399794bcd5c5c93c137a6cd4280a]
+sept.-07 15:12:55.133 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:55.133 [Task submitter] INFO  nextflow.Session - [5f/528ea7] Submitted process > countGC (44)
+sept.-07 15:12:55.149 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 221; name: countGC (41); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/b1/7dbd3a32e49230006151e158f2301b]
+sept.-07 15:12:55.153 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:55.153 [Task submitter] INFO  nextflow.Session - [eb/151093] Submitted process > countGC (45)
+sept.-07 15:12:55.167 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 222; name: countGC (42); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/4b/5113205d177dd596244603587905c8]
+sept.-07 15:12:55.171 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:55.173 [Task submitter] INFO  nextflow.Session - [88/783bc8] Submitted process > countGC (46)
+sept.-07 15:12:55.194 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 223; name: countGC (43); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/dd/b282594b937b319f930421eb10ed94]
+sept.-07 15:12:55.197 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:55.197 [Task submitter] INFO  nextflow.Session - [fe/b73dc2] Submitted process > countGC (47)
+sept.-07 15:12:55.210 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 224; name: countGC (44); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/5f/528ea75d69f0461423de3b965d085e]
+sept.-07 15:12:55.215 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:55.215 [Task submitter] INFO  nextflow.Session - [19/babd73] Submitted process > countGC (48)
+sept.-07 15:12:55.233 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 225; name: countGC (45); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/eb/151093518ba18613ca357adcef7543]
+sept.-07 15:12:55.237 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:55.238 [Task submitter] INFO  nextflow.Session - [4f/fea78e] Submitted process > countGC (49)
+sept.-07 15:12:55.255 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 226; name: countGC (46); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/88/783bc835dba6a4588ba1c859d79db4]
+sept.-07 15:12:55.258 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:55.258 [Task submitter] INFO  nextflow.Session - [89/6c80a6] Submitted process > countGC (50)
+sept.-07 15:12:55.273 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 227; name: countGC (47); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/fe/b73dc2729767a6ef369c7e2a86dc62]
+sept.-07 15:12:55.276 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:55.276 [Task submitter] INFO  nextflow.Session - [f4/571d44] Submitted process > countGC (51)
+sept.-07 15:12:55.292 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 228; name: countGC (48); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/19/babd7325f6c68b87828dad81d30ec3]
+sept.-07 15:12:55.295 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:55.295 [Task submitter] INFO  nextflow.Session - [36/13d2db] Submitted process > countGC (52)
+sept.-07 15:12:55.315 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 229; name: countGC (49); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/4f/fea78e56c90a5593d5bf1aee671cf2]
+sept.-07 15:12:55.320 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:55.321 [Task submitter] INFO  nextflow.Session - [78/f5858e] Submitted process > countGC (53)
+sept.-07 15:12:55.343 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 230; name: countGC (50); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/89/6c80a6ee15b2dcaa953f2e02900171]
+sept.-07 15:12:55.346 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:55.346 [Task submitter] INFO  nextflow.Session - [9e/d0673b] Submitted process > countGC (54)
+sept.-07 15:12:55.354 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 231; name: countGC (51); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/f4/571d44e22f4c794c83444721dccb3b]
+sept.-07 15:12:55.358 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:55.358 [Task submitter] INFO  nextflow.Session - [c4/9f3346] Submitted process > countGC (55)
+sept.-07 15:12:55.374 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 232; name: countGC (52); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/36/13d2db49abf852d8cf7e53aaf13ed6]
+sept.-07 15:12:55.377 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:55.378 [Task submitter] INFO  nextflow.Session - [e7/a0de61] Submitted process > countGC (56)
+sept.-07 15:12:55.399 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 233; name: countGC (53); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/78/f5858e4bedce8d984d6b21c7d60801]
+sept.-07 15:12:55.403 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:55.403 [Task submitter] INFO  nextflow.Session - [c6/af22f4] Submitted process > countGC (57)
+sept.-07 15:12:55.422 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 234; name: countGC (54); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/9e/d0673b7da79596c0160d241726707a]
+sept.-07 15:12:55.425 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:55.425 [Task submitter] INFO  nextflow.Session - [4d/710b87] Submitted process > countGC (58)
+sept.-07 15:12:55.438 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 235; name: countGC (55); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/c4/9f33466208579e29c70b3d99884645]
+sept.-07 15:12:55.442 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:55.442 [Task submitter] INFO  nextflow.Session - [a6/047174] Submitted process > countGC (59)
+sept.-07 15:12:55.456 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 236; name: countGC (56); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/e7/a0de616f066a3ca6e8596495430bcb]
+sept.-07 15:12:55.459 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:55.460 [Task submitter] INFO  nextflow.Session - [6f/402ead] Submitted process > countGC (60)
+sept.-07 15:12:55.484 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 237; name: countGC (57); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/c6/af22f4a413f05dc0e092e8e18a6796]
+sept.-07 15:12:55.487 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:55.487 [Task submitter] INFO  nextflow.Session - [8d/17bd0f] Submitted process > countGC (61)
+sept.-07 15:12:55.500 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 238; name: countGC (58); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/4d/710b878cada7b3043863662af11186]
+sept.-07 15:12:55.503 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:55.503 [Task submitter] INFO  nextflow.Session - [c2/7c8946] Submitted process > countGC (62)
+sept.-07 15:12:55.517 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 239; name: countGC (59); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/a6/0471745342453c31cf6553d9c954b9]
+sept.-07 15:12:55.521 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:55.521 [Task submitter] INFO  nextflow.Session - [89/a7c113] Submitted process > countGC (63)
+sept.-07 15:12:55.536 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 240; name: countGC (60); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/6f/402eadb4977440a6972f7d805ea5e0]
+sept.-07 15:12:55.539 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:55.539 [Task submitter] INFO  nextflow.Session - [d7/dc5c90] Submitted process > countGC (64)
+sept.-07 15:12:55.565 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 241; name: countGC (61); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/8d/17bd0f2e2db6cc68d2b204344d2f5c]
+sept.-07 15:12:55.568 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:55.568 [Task submitter] INFO  nextflow.Session - [36/9daa0e] Submitted process > countGC (65)
+sept.-07 15:12:55.583 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 242; name: countGC (62); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/c2/7c8946ff7c79d898ecffb02d4a17dd]
+sept.-07 15:12:55.587 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:55.587 [Task submitter] INFO  nextflow.Session - [31/fd4a55] Submitted process > countGC (66)
+sept.-07 15:12:55.599 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 243; name: countGC (63); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/89/a7c113bccb3f94e187baec79a172ad]
+sept.-07 15:12:55.602 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:55.603 [Task submitter] INFO  nextflow.Session - [e3/f506e0] Submitted process > countGC (67)
+sept.-07 15:12:55.620 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 244; name: countGC (64); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/d7/dc5c90539a87c15e8c25fd5c674637]
+sept.-07 15:12:55.623 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:55.623 [Task submitter] INFO  nextflow.Session - [ed/3d658e] Submitted process > countGC (68)
+sept.-07 15:12:55.649 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 245; name: countGC (65); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/36/9daa0ef52ae7b573d4be53f59b686e]
+sept.-07 15:12:55.652 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:55.652 [Task submitter] INFO  nextflow.Session - [74/f5237e] Submitted process > countGC (69)
+sept.-07 15:12:55.668 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 246; name: countGC (66); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/31/fd4a554df2f2f49b46154b7fa12bc6]
+sept.-07 15:12:55.671 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:55.672 [Task submitter] INFO  nextflow.Session - [97/d1f61e] Submitted process > countGC (70)
+sept.-07 15:12:55.683 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 247; name: countGC (67); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/e3/f506e01091bfa42c7461e003ab72f5]
+sept.-07 15:12:55.686 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:55.686 [Task submitter] INFO  nextflow.Session - [ad/5203ec] Submitted process > countGC (71)
+sept.-07 15:12:55.704 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 248; name: countGC (68); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/ed/3d658e18b84972a86b6094ae44cadc]
+sept.-07 15:12:55.707 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:55.707 [Task submitter] INFO  nextflow.Session - [41/f00b8a] Submitted process > countGC (72)
+sept.-07 15:12:55.731 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 249; name: countGC (69); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/74/f5237e5069f543527782a7c79567c9]
+sept.-07 15:12:55.735 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:55.735 [Task submitter] INFO  nextflow.Session - [24/b27835] Submitted process > countGC (73)
+sept.-07 15:12:55.752 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 250; name: countGC (70); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/97/d1f61e19d4065807bcb1ac207b6d96]
+sept.-07 15:12:55.757 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:55.757 [Task submitter] INFO  nextflow.Session - [c5/7187fd] Submitted process > countGC (74)
+sept.-07 15:12:55.768 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 251; name: countGC (71); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/ad/5203ec98a17f82986a78af0712dc45]
+sept.-07 15:12:55.771 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:55.771 [Task submitter] INFO  nextflow.Session - [1e/13dc4e] Submitted process > countGC (75)
+sept.-07 15:12:55.788 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 252; name: countGC (72); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/41/f00b8ab810409c822cfb1fb1c10047]
+sept.-07 15:12:55.792 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:55.792 [Task submitter] INFO  nextflow.Session - [c8/004260] Submitted process > countGC (76)
+sept.-07 15:12:55.813 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 253; name: countGC (73); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/24/b278359adbd9502ead44d0ed554b3c]
+sept.-07 15:12:55.816 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:55.817 [Task submitter] INFO  nextflow.Session - [24/78e67c] Submitted process > countGC (77)
+sept.-07 15:12:55.839 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 254; name: countGC (74); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/c5/7187fdb262be634dac474d8236e0df]
+sept.-07 15:12:55.843 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:55.843 [Task submitter] INFO  nextflow.Session - [52/2ef2e6] Submitted process > countGC (78)
+sept.-07 15:12:55.854 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 255; name: countGC (75); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/1e/13dc4e0f8fe2dcae08bb86bd3f9de2]
+sept.-07 15:12:55.858 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:55.858 [Task submitter] INFO  nextflow.Session - [00/c09f70] Submitted process > countGC (79)
+sept.-07 15:12:55.874 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 256; name: countGC (76); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/c8/004260e25c2c4ba2d7c1c28740a569]
+sept.-07 15:12:55.877 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:55.877 [Task submitter] INFO  nextflow.Session - [8e/67afa6] Submitted process > countGC (80)
+sept.-07 15:12:55.900 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 257; name: countGC (77); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/24/78e67c7a9ceb0c0bfb3dd391024a3b]
+sept.-07 15:12:55.904 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:55.904 [Task submitter] INFO  nextflow.Session - [2b/f7b53d] Submitted process > countGC (81)
+sept.-07 15:12:55.924 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 258; name: countGC (78); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/52/2ef2e648644e66151c44e86f7e579c]
+sept.-07 15:12:55.928 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:55.928 [Task submitter] INFO  nextflow.Session - [f9/7eafbb] Submitted process > countGC (82)
+sept.-07 15:12:55.940 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 259; name: countGC (79); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/00/c09f7068c4ef11840a00a2a3457e67]
+sept.-07 15:12:55.945 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:55.945 [Task submitter] INFO  nextflow.Session - [cf/537359] Submitted process > countGC (83)
+sept.-07 15:12:55.960 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 260; name: countGC (80); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/8e/67afa60575b004aa72d49ab5631b9a]
+sept.-07 15:12:55.964 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:55.964 [Task submitter] INFO  nextflow.Session - [85/3ef79e] Submitted process > countGC (84)
+sept.-07 15:12:55.991 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 261; name: countGC (81); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/2b/f7b53d932413a71aacf6f6af0f589d]
+sept.-07 15:12:55.998 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:55.999 [Task submitter] INFO  nextflow.Session - [4f/0b9acd] Submitted process > countGC (85)
+sept.-07 15:12:56.011 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 262; name: countGC (82); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/f9/7eafbbfe17940ae32802d3045c30b2]
+sept.-07 15:12:56.017 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:56.017 [Task submitter] INFO  nextflow.Session - [24/c11d62] Submitted process > countGC (86)
+sept.-07 15:12:56.020 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 263; name: countGC (83); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/cf/5373596ed5e1fa1c55665a5853f284]
+sept.-07 15:12:56.023 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:56.024 [Task submitter] INFO  nextflow.Session - [8f/1d03af] Submitted process > countGC (87)
+sept.-07 15:12:56.052 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 264; name: countGC (84); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/85/3ef79e3f4bd3b3474106b44eb1ef60]
+sept.-07 15:12:56.056 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:56.056 [Task submitter] INFO  nextflow.Session - [b1/80df0a] Submitted process > countGC (88)
+sept.-07 15:12:56.080 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 265; name: countGC (85); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/4f/0b9acd5f7256953d0464ba25ae6d29]
+sept.-07 15:12:56.084 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:56.084 [Task submitter] INFO  nextflow.Session - [33/588f60] Submitted process > countGC (89)
+sept.-07 15:12:56.098 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 266; name: countGC (86); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/24/c11d62343671971a4b1295c2a00c3f]
+sept.-07 15:12:56.102 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+sept.-07 15:12:56.102 [Task submitter] INFO  nextflow.Session - [4b/31e75e] Submitted process > countGC (90)
+sept.-07 15:12:56.108 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 267; name: countGC (87); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/8f/1d03af71626c6dec461bb45912aee7]
+sept.-07 15:12:56.135 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 268; name: countGC (88); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/b1/80df0a6c545a250b2b9695c82e64e2]
+sept.-07 15:12:56.165 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 269; name: countGC (89); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/33/588f60e33c0e489389679951b2a80d]
+sept.-07 15:12:56.172 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 270; name: countGC (90); status: COMPLETED; exit: 0; error: -; workDir: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/nf-example/work/4b/31e75e5db91c164216da595aeb3a1d]
+sept.-07 15:12:56.175 [Actor Thread 3] DEBUG nextflow.Session - <<< barrier arrive (process: countGC)
+sept.-07 15:12:56.175 [main] DEBUG nextflow.Session - Session await > all process finished
+sept.-07 15:12:56.176 [Task monitor] DEBUG n.processor.TaskPollingMonitor - <<< barrier arrives (monitor: local)
+sept.-07 15:12:56.176 [main] DEBUG nextflow.Session - Session await > all barriers passed
+sept.-07 15:12:56.183 [main] DEBUG nextflow.trace.StatsObserver - Workflow completed > WorkflowStats[succeedCount=270; failedCount=0; ignoredCount=0; cachedCount=0; succeedDuration=18.3s; failedDuration=0ms; cachedDuration=0ms]
+sept.-07 15:12:56.193 [main] DEBUG nextflow.CacheDB - Closing CacheDB done
+sept.-07 15:12:56.206 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye

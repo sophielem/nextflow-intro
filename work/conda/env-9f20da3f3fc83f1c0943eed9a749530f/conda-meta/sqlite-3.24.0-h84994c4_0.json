@@ -1,0 +1,111 @@
+{
+  "arch": "x86_64",
+  "build": "h84994c4_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "libedit >=3.1.20170329,<3.2.0a0",
+    "libgcc-ng >=7.2.0"
+  ],
+  "extracted_package_dir": "/home/sdv/m2bi/slematre/.conda/pkgs/sqlite-3.24.0-h84994c4_0",
+  "features": "",
+  "files": [
+    "bin/sqlite3",
+    "include/sqlite3.h",
+    "include/sqlite3ext.h",
+    "lib/libsqlite3.a",
+    "lib/libsqlite3.la",
+    "lib/libsqlite3.so",
+    "lib/libsqlite3.so.0",
+    "lib/libsqlite3.so.0.8.6",
+    "lib/pkgconfig/sqlite3.pc"
+  ],
+  "fn": "sqlite-3.24.0-h84994c4_0.tar.bz2",
+  "license": "Public-Domain (http://www.sqlite.org/copyright.html)",
+  "link": {
+    "source": "/home/sdv/m2bi/slematre/.conda/pkgs/sqlite-3.24.0-h84994c4_0",
+    "type": 1
+  },
+  "md5": "8d9545311f3a1fa6cdbab2e6c1351065",
+  "name": "sqlite",
+  "package_tarball_full_path": "/home/sdv/m2bi/slematre/.conda/pkgs/sqlite-3.24.0-h84994c4_0.tar.bz2",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "bin/sqlite3",
+        "path_type": "hardlink",
+        "sha256": "675a3312689fc57727503fa0323b5733529b17f13a1e61cc0ba8303229448432",
+        "sha256_in_prefix": "675a3312689fc57727503fa0323b5733529b17f13a1e61cc0ba8303229448432",
+        "size_in_bytes": 1317296
+      },
+      {
+        "_path": "include/sqlite3.h",
+        "path_type": "hardlink",
+        "sha256": "89192f125b3615dcad65a8ae091e1b8dd14e6b9e418225ab73646412a981a83c",
+        "sha256_in_prefix": "89192f125b3615dcad65a8ae091e1b8dd14e6b9e418225ab73646412a981a83c",
+        "size_in_bytes": 544160
+      },
+      {
+        "_path": "include/sqlite3ext.h",
+        "path_type": "hardlink",
+        "sha256": "b74c1a8f99b7f8cbb85a0eab134e9ddd60a538bacf412377fee3df95920631dc",
+        "sha256_in_prefix": "b74c1a8f99b7f8cbb85a0eab134e9ddd60a538bacf412377fee3df95920631dc",
+        "size_in_bytes": 32989
+      },
+      {
+        "_path": "lib/libsqlite3.a",
+        "path_type": "hardlink",
+        "sha256": "3a81130b03fd603abcdadd62560c052cadb7a487484277e3c2b21d0a478925fa",
+        "sha256_in_prefix": "3a81130b03fd603abcdadd62560c052cadb7a487484277e3c2b21d0a478925fa",
+        "size_in_bytes": 1419776
+      },
+      {
+        "_path": "lib/libsqlite3.la",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/opt/anaconda1anaconda2anaconda3",
+        "sha256": "91f9a5c7890d29c345bc5bbe02ef353cd2f7616079fe0cf1695192334673d939",
+        "sha256_in_prefix": "2f879ab4ad2132b572aed96336a022be56080fb28b5cefad2a11dc42837942a9",
+        "size_in_bytes": 1017
+      },
+      {
+        "_path": "lib/libsqlite3.so",
+        "path_type": "softlink",
+        "sha256": "f9492fb19f3989fb24dc9fc152e06b9211f96914edfecdd6191f5765dc372a57",
+        "size_in_bytes": 1169744
+      },
+      {
+        "_path": "lib/libsqlite3.so.0",
+        "path_type": "softlink",
+        "sha256": "f9492fb19f3989fb24dc9fc152e06b9211f96914edfecdd6191f5765dc372a57",
+        "size_in_bytes": 1169744
+      },
+      {
+        "_path": "lib/libsqlite3.so.0.8.6",
+        "path_type": "hardlink",
+        "sha256": "f9492fb19f3989fb24dc9fc152e06b9211f96914edfecdd6191f5765dc372a57",
+        "sha256_in_prefix": "f9492fb19f3989fb24dc9fc152e06b9211f96914edfecdd6191f5765dc372a57",
+        "size_in_bytes": 1169744
+      },
+      {
+        "_path": "lib/pkgconfig/sqlite3.pc",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/opt/anaconda1anaconda2anaconda3",
+        "sha256": "9e171213026904feb273e9ec2e8ce4c923735df7d5d685794bed2075d966fc3c",
+        "sha256_in_prefix": "f961479a2267494087c72441c7e14a37bbafb90a20602d2153dbbdc6ee855a76",
+        "size_in_bytes": 304
+      }
+    ],
+    "paths_version": 1
+  },
+  "platform": "linux",
+  "requested_spec": "None",
+  "size": 1859563,
+  "subdir": "linux-64",
+  "timestamp": 1529358396807,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/sqlite-3.24.0-h84994c4_0.tar.bz2",
+  "version": "3.24.0"
+}

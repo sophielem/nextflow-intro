@@ -1,0 +1,13 @@
+prefix=/home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/work/conda/env-9f20da3f3fc83f1c0943eed9a749530f
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+enginesdir=${libdir}/engines
+
+Name: OpenSSL-libcrypto
+Description: OpenSSL cryptography library
+Version: 1.0.2p
+Requires: 
+Libs: -L${libdir} -lcrypto
+Libs.private: -Wl,-O2 -Wl,--sort-common -Wl,--as-needed -Wl,-z,relro -Wl,-z,now -Wl,-rpath,/home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/work/conda/env-9f20da3f3fc83f1c0943eed9a749530f/lib -L/home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/work/conda/env-9f20da3f3fc83f1c0943eed9a749530f/lib -ldl
+Cflags: -I${includedir} 

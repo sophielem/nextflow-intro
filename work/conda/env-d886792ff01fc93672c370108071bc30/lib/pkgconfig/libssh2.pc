@@ -1,0 +1,17 @@
+###########################################################################
+# libssh2 installation details
+###########################################################################
+
+prefix=/home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/work/conda/env-d886792ff01fc93672c370108071bc30
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+Name: libssh2
+URL: https://www.libssh2.org/
+Description: The SSH library
+Version: 1.8.0
+Requires.private: libssl,libcrypto
+Libs: -L${libdir} -lssh2 
+Libs.private: 
+Cflags: -I${includedir}

@@ -1,0 +1,13 @@
+prefix=/home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/work/conda/env-6b814279c725bb05d4bfdac0692a9c3d
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+sharedlibdir=${libdir}
+includedir=${prefix}/include
+
+Name: zlib
+Description: zlib compression library
+Version: 1.2.11
+
+Requires:
+Libs: -L${libdir} -L${sharedlibdir} -lz
+Cflags: -I${includedir}

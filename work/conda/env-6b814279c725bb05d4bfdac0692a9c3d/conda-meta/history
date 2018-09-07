@@ -1,0 +1,8 @@
+==> 2018-09-07 16:08:56 <==
+# cmd: /opt/sdv/anaconda/bin/conda create --mkdir --yes --quiet --prefix /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/work/conda/env-6b814279c725bb05d4bfdac0692a9c3d bioconda::bedtools
+# conda version: 4.5.8
++bioconda::bedtools-2.27.1-he941832_2
++defaults::libgcc-ng-8.2.0-hdf63c60_1
++defaults::libstdcxx-ng-8.2.0-hdf63c60_1
++defaults::zlib-1.2.11-ha838bed_2
+# update specs: ['bioconda::bedtools']

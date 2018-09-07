@@ -1,0 +1,51 @@
+{
+  "arch": "x86_64",
+  "build": "0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [],
+  "extracted_package_dir": "/home/sdv/m2bi/slematre/.conda/pkgs/intel-openmp-2018.0.3-0",
+  "features": "",
+  "files": [
+    "lib/libiomp5.so",
+    "lib/libiompstubs5.so"
+  ],
+  "fn": "intel-openmp-2018.0.3-0.tar.bz2",
+  "license": "proprietary - Intel",
+  "license_family": "Proprietary",
+  "link": {
+    "source": "/home/sdv/m2bi/slematre/.conda/pkgs/intel-openmp-2018.0.3-0",
+    "type": 1
+  },
+  "md5": "364bdca356b384243cb72c7daca416be",
+  "name": "intel-openmp",
+  "package_tarball_full_path": "/home/sdv/m2bi/slematre/.conda/pkgs/intel-openmp-2018.0.3-0.tar.bz2",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/libiomp5.so",
+        "path_type": "hardlink",
+        "sha256": "63374374ff4d14e9fea59c8bbdcffac1a7201f88c9938815823d788a44a52436",
+        "sha256_in_prefix": "63374374ff4d14e9fea59c8bbdcffac1a7201f88c9938815823d788a44a52436",
+        "size_in_bytes": 2099746
+      },
+      {
+        "_path": "lib/libiompstubs5.so",
+        "path_type": "hardlink",
+        "sha256": "3194e9c8e5ed60c10c59d9ce4af14b220d23e7b286a70c45c1309a3d2a38b3fb",
+        "sha256_in_prefix": "3194e9c8e5ed60c10c59d9ce4af14b220d23e7b286a70c45c1309a3d2a38b3fb",
+        "size_in_bytes": 110714
+      }
+    ],
+    "paths_version": 1
+  },
+  "platform": "linux",
+  "requested_spec": "None",
+  "size": 721827,
+  "subdir": "linux-64",
+  "timestamp": 1528122050163,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/intel-openmp-2018.0.3-0.tar.bz2",
+  "version": "2018.0.3"
+}

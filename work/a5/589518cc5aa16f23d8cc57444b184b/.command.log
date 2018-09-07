@@ -1,0 +1,7 @@
+Warning: Same mate file "ERR036019samp_1.fastq.gz" appears as argument to both -1 and -2
+Extra parameter(s) specified: "ERR036019samp_2.fastq.gz[0]", "ERR036019samp_2.fastq.gz[1]"
+Note that if <mates> files are specified using -1/-2, a <singles> file cannot
+also be specified.  Please run bowtie separately for mates and singles.
+Error: Encountered internal Bowtie 2 exception (#1)
+Command: /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/work/conda/env-3238bf2a524e985c8252d91f9835e761/bin/bowtie2-align-s --wrapper basic-0 -q -x /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/data/FN433596 -S output.sam -p 3 -1 ERR036019samp_1.fastq.gz -2 ERR036019samp_1.fastq.gz ERR036019samp_2.fastq.gz[0] ERR036019samp_2.fastq.gz[1] 
+(ERR): bowtie2-align exited with value 1

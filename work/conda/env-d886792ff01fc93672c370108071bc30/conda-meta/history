@@ -1,0 +1,17 @@
+==> 2018-09-07 16:03:01 <==
+# cmd: /opt/sdv/anaconda/bin/conda create --mkdir --yes --quiet --prefix /home/sdv/m2bi/slematre/Documents/gestion_projet/nextflow-intro/work/conda/env-d886792ff01fc93672c370108071bc30 bioconda::samtools
+# conda version: 4.5.8
++bioconda::libdeflate-1.0-h470a237_0
++bioconda::samtools-1.9-h8ee4bcc_1
++defaults::bzip2-1.0.6-h14c3975_5
++defaults::ca-certificates-2018.03.07-0
++defaults::curl-7.61.0-h84994c4_0
++defaults::libcurl-7.61.0-h1ad7b7a_0
++defaults::libgcc-ng-8.2.0-hdf63c60_1
++defaults::libssh2-1.8.0-h9cfc8f7_4
++defaults::libstdcxx-ng-8.2.0-hdf63c60_1
++defaults::ncurses-6.1-hf484d3e_0
++defaults::openssl-1.0.2p-h14c3975_0
++defaults::xz-5.2.4-h14c3975_4
++defaults::zlib-1.2.11-ha838bed_2
+# update specs: ['bioconda::samtools']
